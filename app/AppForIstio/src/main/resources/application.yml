@@ -1,0 +1,15 @@
+version:
+  string: ${VERSION_STR:"1.0"}
+
+management:
+  endpoint:
+    health:
+      probes:
+        enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: health,info,prometheus
+
+server:
+  port: 8000
